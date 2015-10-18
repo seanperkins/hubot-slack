@@ -266,7 +266,7 @@ class SlackBot extends Adapter
     return unless channel
 
     msg = {}
-    msg.attachments = data.attachments || data.content
+    msg.attachments = data.attachments || data.attachment || data.content
     msg.attachments = [msg.attachments] unless Array.isArray msg.attachments
 
     msg.text = data.text
